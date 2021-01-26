@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_dzlmgF-yEeuqNe3Z9h2Wlw" name="NewModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="_F0rZgF-2EeuqNe3Z9h2Wlw" name="cArmy" visibility="public">
+    <ownedComment xmi:id="_5dRPkF_DEeuqNe3Z9h2Wlw" annotatedElement="_F0rZgF-2EeuqNe3Z9h2Wlw">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/enemies/army.hpp</body>
+    </ownedComment>
+    <generalization xmi:id="_Wb31QF-2EeuqNe3Z9h2Wlw" general="_K-4NgF-2EeuqNe3Z9h2Wlw"/>
+    <ownedOperation xmi:id="_o5k_UF-5EeuqNe3Z9h2Wlw" name="Create_MRuby_Object" isAbstract="true">
+      <ownedParameter xmi:id="_42z4EF-5EeuqNe3Z9h2Wlw" name="p_state"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_MUotQF-7EeuqNe3Z9h2Wlw" name="Load_From_Savegame" isAbstract="true">
+      <ownedParameter xmi:id="_V5BNkF-7EeuqNe3Z9h2Wlw" name="save_object"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_v1wiwF_DEeuqNe3Z9h2Wlw" name="Save_To_Savegame_XML_Node" isAbstract="true">
+      <ownedParameter xmi:id="_2TQKoF_DEeuqNe3Z9h2Wlw" name="p_element"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_F1XiwF_GEeuqNe3Z9h2Wlw" name="Hit_Enemy">
+      <ownedParameter xmi:id="_Ip2ckF_GEeuqNe3Z9h2Wlw" name="enemy"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_RJF5wF_GEeuqNe3Z9h2Wlw" name="Set_Direction" isAbstract="true">
+      <ownedParameter xmi:id="_fTyd4F_GEeuqNe3Z9h2Wlw" name="dir"/>
+      <ownedParameter xmi:id="_jRPx8F_GEeuqNe3Z9h2Wlw" name="new_start_direction" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_K-4NgF-2EeuqNe3Z9h2Wlw" name="cEnemy" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_MGXkkF-3EeuqNe3Z9h2Wlw" name="mrb_armadillo" visibility="public"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IB96AF_CEeuqNe3Z9h2Wlw" name="cArmysToMrb_armadillos" memberEnd="_IB96AV_CEeuqNe3Z9h2Wlw _IB_vMF_CEeuqNe3Z9h2Wlw" navigableOwnedEnd="_IB_vMF_CEeuqNe3Z9h2Wlw">
+    <ownedEnd xmi:id="_IB96AV_CEeuqNe3Z9h2Wlw" name="cArmys" type="_F0rZgF-2EeuqNe3Z9h2Wlw" association="_IB96AF_CEeuqNe3Z9h2Wlw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IB_IIF_CEeuqNe3Z9h2Wlw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IB_IIV_CEeuqNe3Z9h2Wlw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_IB_vMF_CEeuqNe3Z9h2Wlw" name="mrb_armadillos" type="_MGXkkF-3EeuqNe3Z9h2Wlw" aggregation="shared" association="_IB96AF_CEeuqNe3Z9h2Wlw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IB_vMV_CEeuqNe3Z9h2Wlw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IB_vMl_CEeuqNe3Z9h2Wlw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_Zqng0F_EEeuqNe3Z9h2Wlw" name="Int" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_eu8WUF_EEeuqNe3Z9h2Wlw" name="Int" visibility="public">
+    <ownedAttribute xmi:id="_gKCbUF_EEeuqNe3Z9h2Wlw" name="Int" visibility="public" type="_eu8WUF_EEeuqNe3Z9h2Wlw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gKCbUV_EEeuqNe3Z9h2Wlw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gKDCYF_EEeuqNe3Z9h2Wlw" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_2vSJ4F_EEeuqNe3Z9h2Wlw" name="Bool" visibility="public"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_Wdz7sF_GEeuqNe3Z9h2Wlw" name="const" visibility="public"/>
+</uml:Model>
