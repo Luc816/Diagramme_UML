@@ -21,9 +21,20 @@
       <ownedParameter xmi:id="_fTyd4F_GEeuqNe3Z9h2Wlw" name="dir"/>
       <ownedParameter xmi:id="_jRPx8F_GEeuqNe3Z9h2Wlw" name="new_start_direction" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
     </ownedOperation>
+    <ownedOperation xmi:id="_C73XUF_MEeuqNe3Z9h2Wlw" name="Handle_Collision_Player" isAbstract="true">
+      <ownedParameter xmi:id="_FF6NAF_MEeuqNe3Z9h2Wlw" name="collision"/>
+    </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_K-4NgF-2EeuqNe3Z9h2Wlw" name="cEnemy" visibility="public"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_MGXkkF-3EeuqNe3Z9h2Wlw" name="mrb_armadillo" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_K-4NgF-2EeuqNe3Z9h2Wlw" name="cEnemy" visibility="public">
+    <ownedComment xmi:id="_c1LpQF_NEeuqNe3Z9h2Wlw" annotatedElement="_K-4NgF-2EeuqNe3Z9h2Wlw">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/enemies/enemy.hpp</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_MGXkkF-3EeuqNe3Z9h2Wlw" name="mrb_armadillo" visibility="public">
+    <ownedComment xmi:id="_hbnB0F_NEeuqNe3Z9h2Wlw" annotatedElement="_MGXkkF-3EeuqNe3Z9h2Wlw">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/scripting/objects/enemies/mrb_armadillo.hpp</body>
+    </ownedComment>
+  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_IB96AF_CEeuqNe3Z9h2Wlw" name="cArmysToMrb_armadillos" memberEnd="_IB96AV_CEeuqNe3Z9h2Wlw _IB_vMF_CEeuqNe3Z9h2Wlw" navigableOwnedEnd="_IB_vMF_CEeuqNe3Z9h2Wlw">
     <ownedEnd xmi:id="_IB96AV_CEeuqNe3Z9h2Wlw" name="cArmys" type="_F0rZgF-2EeuqNe3Z9h2Wlw" association="_IB96AF_CEeuqNe3Z9h2Wlw">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IB_IIF_CEeuqNe3Z9h2Wlw"/>
