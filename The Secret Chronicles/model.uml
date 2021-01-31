@@ -27,8 +27,25 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_K-4NgF-2EeuqNe3Z9h2Wlw" name="cEnemy" visibility="public">
     <ownedComment xmi:id="_c1LpQF_NEeuqNe3Z9h2Wlw" annotatedElement="_K-4NgF-2EeuqNe3Z9h2Wlw">
-      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/enemies/enemy.hpp</body>
+      <body> https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/enemies/enemy.hpp</body>
     </ownedComment>
+    <generalization xmi:id="_IroosGQNEeumrdJV2so_bQ" general="_JlklkGQGEeumrdJV2so_bQ"/>
+    <ownedAttribute xmi:id="_M_xM0GQMEeumrdJV2so_bQ" name="m_dead" visibility="public" type="_2vSJ4F_EEeuqNe3Z9h2Wlw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M_xz4GQMEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M_xz4WQMEeumrdJV2so_bQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_qXzd0GQMEeumrdJV2so_bQ" name="m_dying_counter" visibility="protected" type="_n9sL0GQMEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qXzd0WQMEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qXzd0mQMEeumrdJV2so_bQ" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_fSAx8GQIEeumrdJV2so_bQ" name="Set_Dead" isAbstract="true">
+      <ownedParameter xmi:id="_rk6G8GQIEeumrdJV2so_bQ" name="enable" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_s8JfUGQLEeumrdJV2so_bQ" name="Update_Late" isAbstract="true"/>
+    <ownedOperation xmi:id="_6GuqQGQLEeumrdJV2so_bQ" name="Handle_Ball_Hit" isAbstract="true">
+      <ownedParameter xmi:id="_76a1cGQLEeumrdJV2so_bQ" name="ball"/>
+      <ownedParameter xmi:id="_AS9jAGQMEeumrdJV2so_bQ" name="p_collision"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_MGXkkF-3EeuqNe3Z9h2Wlw" name="mrb_armadillo" visibility="public">
     <ownedComment xmi:id="_hbnB0F_NEeuqNe3Z9h2Wlw" annotatedElement="_MGXkkF-3EeuqNe3Z9h2Wlw">
@@ -54,4 +71,161 @@
   </packagedElement>
   <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_2vSJ4F_EEeuqNe3Z9h2Wlw" name="Bool" visibility="public"/>
   <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_Wdz7sF_GEeuqNe3Z9h2Wlw" name="const" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_JlklkGQGEeumrdJV2so_bQ" name="cMovingSprite" visibility="public">
+    <ownedComment xmi:id="_iRV3kGQNEeumrdJV2so_bQ" annotatedElement="_JlklkGQGEeumrdJV2so_bQ">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/objects/movingsprite.hpp</body>
+    </ownedComment>
+    <generalization xmi:id="_Irb3kGQREeumrdJV2so_bQ" general="_DUJp0GQREeumrdJV2so_bQ"/>
+    <generalization xmi:id="_W_DxYGQVEeumrdJV2so_bQ"/>
+    <ownedAttribute xmi:id="_7Cq70GQQEeumrdJV2so_bQ" name="m_gravity_max" visibility="public" type="_n9sL0GQMEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7Cq70WQQEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7Cq70mQQEeumrdJV2so_bQ" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_QjjxwGQOEeumrdJV2so_bQ" name="Set_Image" isAbstract="true">
+      <ownedParameter xmi:id="_Ti1mUGQOEeumrdJV2so_bQ" name="new_image"/>
+      <ownedParameter xmi:id="_UaAe4GQOEeumrdJV2so_bQ" name="new_start_image" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+      <ownedParameter xmi:id="_X5AVUGQOEeumrdJV2so_bQ" name="del_img" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_4NyO0GQPEeumrdJV2so_bQ" name="Auto_Slow_Down">
+      <ownedParameter xmi:id="_9oT90GQPEeumrdJV2so_bQ" name="x_speed" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+      <ownedParameter xmi:id="_AaPS4GQQEeumrdJV2so_bQ" name="y_speed" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_wxtCUGQQEeumrdJV2so_bQ" name="Update_Anti_Stuck"/>
+    <ownedOperation xmi:id="_z2PKUGQQEeumrdJV2so_bQ" name="Freeze">
+      <ownedParameter xmi:id="_2DPNYGQQEeumrdJV2so_bQ" name="freeze_time" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_n9sL0GQMEeumrdJV2so_bQ" name="float" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_DUJp0GQREeumrdJV2so_bQ" name="cSprite" visibility="public">
+    <ownedComment xmi:id="_G05zwGQREeumrdJV2so_bQ" annotatedElement="_DUJp0GQREeumrdJV2so_bQ">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/objects/sprite.hpp</body>
+    </ownedComment>
+    <generalization xmi:id="_Fd9AMGQXEeumrdJV2so_bQ" general="_-MHKQGQWEeumrdJV2so_bQ"/>
+    <ownedOperation xmi:id="_rN3J0GQREeumrdJV2so_bQ" name="Set_Sprite_Type">
+      <ownedParameter xmi:id="_tQXNEGQREeumrdJV2so_bQ" name="type"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_0BR1UGQTEeumrdJV2so_bQ" name="Set_Ignore_Camera">
+      <ownedParameter xmi:id="_3COd0GQTEeumrdJV2so_bQ" name="enable" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_5tbf0GQTEeumrdJV2so_bQ" name="Set_Spawned" isAbstract="true">
+      <ownedParameter xmi:id="_7qtE0GQTEeumrdJV2so_bQ" name="enable" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_XIIqUGQUEeumrdJV2so_bQ" name="Set_Pos">
+      <ownedParameter xmi:id="_ZU-VUGQUEeumrdJV2so_bQ" name="x" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+      <ownedParameter xmi:id="_ZhVWUGQUEeumrdJV2so_bQ" name="y" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+      <ownedParameter xmi:id="_aLwzYGQUEeumrdJV2so_bQ" name="new_startpos" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_reeRUGQUEeumrdJV2so_bQ" name="Set_Active" isAbstract="true">
+      <ownedParameter xmi:id="_tVak0GQUEeumrdJV2so_bQ" name="enabled" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_gB0LUGQVEeumrdJV2so_bQ" name="cBall" visibility="public">
+    <ownedComment xmi:id="_ljUsEGQVEeumrdJV2so_bQ" annotatedElement="_gB0LUGQVEeumrdJV2so_bQ">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/objects/ball.hpp</body>
+    </ownedComment>
+    <generalization xmi:id="_g5c98GQVEeumrdJV2so_bQ" general="_JlklkGQGEeumrdJV2so_bQ"/>
+    <ownedAttribute xmi:id="_-Th2UGQVEeumrdJV2so_bQ" name="m_glim_mod" visibility="public" type="_n9sL0GQMEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-Th2UWQVEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-Th2UmQVEeumrdJV2so_bQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Al3FUGQWEeumrdJV2so_bQ" name="m_glim_counter" visibility="public" type="_n9sL0GQMEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Al3FUWQWEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Al3FUmQWEeumrdJV2so_bQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_DQOZ0GQWEeumrdJV2so_bQ" name="m_fire_counter" visibility="public" type="_n9sL0GQMEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DQOZ0WQWEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DQOZ0mQWEeumrdJV2so_bQ" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_1vNE0GQVEeumrdJV2so_bQ" name="Handle_Collision_Lava" isAbstract="true">
+      <ownedParameter xmi:id="_31qbAGQVEeumrdJV2so_bQ" name="collision"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_6hmc0GQVEeumrdJV2so_bQ" name=" Handle_Collision_Massive" isAbstract="true">
+      <ownedParameter xmi:id="_8KqsYGQVEeumrdJV2so_bQ" name="collision"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rIg9gGQWEeumrdJV2so_bQ" name="cBallsToCEnemys" memberEnd="_rIg9gWQWEeumrdJV2so_bQ _rIhkkmQWEeumrdJV2so_bQ" navigableOwnedEnd="_rIhkkmQWEeumrdJV2so_bQ">
+    <ownedEnd xmi:id="_rIg9gWQWEeumrdJV2so_bQ" name="cBalls" type="_gB0LUGQVEeumrdJV2so_bQ" association="_rIg9gGQWEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rIhkkGQWEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rIhkkWQWEeumrdJV2so_bQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_rIhkkmQWEeumrdJV2so_bQ" name="cEnemys" type="_K-4NgF-2EeuqNe3Z9h2Wlw" aggregation="shared" association="_rIg9gGQWEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rIiLoGQWEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rIiLoWQWEeumrdJV2so_bQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-MHKQGQWEeumrdJV2so_bQ" name="cCollidingSprite" visibility="public">
+    <ownedComment xmi:id="_G9SE8GQXEeumrdJV2so_bQ" annotatedElement="_-MHKQGQWEeumrdJV2so_bQ">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/objects/sprite.hpp</body>
+    </ownedComment>
+    <ownedOperation xmi:id="_Nguj0GQXEeumrdJV2so_bQ" name="Set_Sprite_Manager" isAbstract="true">
+      <ownedParameter xmi:id="_Q3zNUGQXEeumrdJV2so_bQ" name="sprite_manager"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_UtY-0GQXEeumrdJV2so_bQ" name="Handle_Collisions"/>
+    <ownedOperation xmi:id="_YGS0UGQXEeumrdJV2so_bQ" name="Create_Collision_Object">
+      <ownedParameter xmi:id="_jDEq8GQXEeumrdJV2so_bQ" name="base"/>
+      <ownedParameter xmi:id="_lVKCUGQXEeumrdJV2so_bQ" name="col"/>
+      <ownedParameter xmi:id="_n3O9gGQXEeumrdJV2so_bQ" name="valid_type"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_qT6bUGQXEeumrdJV2so_bQ" name="Add_Collisions">
+      <ownedParameter xmi:id="_s6jGYGQXEeumrdJV2so_bQ" name="col_list"/>
+      <ownedParameter xmi:id="_vVbNYGQXEeumrdJV2so_bQ" name="add_if_new" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1jbAsGQXEeumrdJV2so_bQ" name="Handle_Collision_Box" isAbstract="true">
+      <ownedParameter xmi:id="_4H3TYGQXEeumrdJV2so_bQ" name="cdirection"/>
+      <ownedParameter xmi:id="_6HMt4GQXEeumrdJV2so_bQ" name="r2"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WRI0EGQYEeumrdJV2so_bQ" name="cTurtleBoss" visibility="public">
+    <ownedComment xmi:id="_cRLD4GQYEeumrdJV2so_bQ" annotatedElement="_WRI0EGQYEeumrdJV2so_bQ">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/enemies/bosses/turtle_boss.hpp</body>
+    </ownedComment>
+    <generalization xmi:id="_Y0PC8GQYEeumrdJV2so_bQ" general="_K-4NgF-2EeuqNe3Z9h2Wlw"/>
+    <ownedOperation xmi:id="_pyfT0GQYEeumrdJV2so_bQ" name="Set_Max_Hits">
+      <ownedParameter xmi:id="_rkVE4GQYEeumrdJV2so_bQ" name="nmax_hits" type="_mV_-0GQYEeumrdJV2so_bQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ulfv0GQYEeumrdJV2so_bQ" name="Set_Max_Downgrade_Counts">
+      <ownedParameter xmi:id="_whSHEGQYEeumrdJV2so_bQ" name="nmax_downgrade_count" type="_mV_-0GQYEeumrdJV2so_bQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1NJZQGQYEeumrdJV2so_bQ" name="Set_Shell_Time">
+      <ownedParameter xmi:id="_1-IxUGQYEeumrdJV2so_bQ" name="nmax_downgrade_time" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_867kUGQYEeumrdJV2so_bQ" name="Throw_Fireballs">
+      <ownedParameter xmi:id="_-dN2cGQYEeumrdJV2so_bQ" name="amount" type="_mV_-0GQYEeumrdJV2so_bQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_BoI6UGQZEeumrdJV2so_bQ" name="Generate_Stars">
+      <ownedParameter xmi:id="_DNThUGQZEeumrdJV2so_bQ" name="amount" type="_mV_-0GQYEeumrdJV2so_bQ"/>
+      <ownedParameter xmi:id="_FxLzUGQZEeumrdJV2so_bQ" name="particle_scale" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_mV_-0GQYEeumrdJV2so_bQ" name="int" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Z0JLUGQZEeumrdJV2so_bQ" name="mrb_turtle_boss" visibility="public">
+    <ownedComment xmi:id="_dCOQ4GQZEeumrdJV2so_bQ" annotatedElement="_Z0JLUGQZEeumrdJV2so_bQ">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/scripting/objects/enemies/mrb_turtle_boss.hpp</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tvPn0GQZEeumrdJV2so_bQ" name="cTurtleBosssToMrb_turtle_bosss" memberEnd="_tvPn0WQZEeumrdJV2so_bQ _tvPn1GQZEeumrdJV2so_bQ" navigableOwnedEnd="_tvPn1GQZEeumrdJV2so_bQ">
+    <ownedEnd xmi:id="_tvPn0WQZEeumrdJV2so_bQ" name="cTurtleBosss" type="_WRI0EGQYEeumrdJV2so_bQ" association="_tvPn0GQZEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tvPn0mQZEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tvPn02QZEeumrdJV2so_bQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_tvPn1GQZEeumrdJV2so_bQ" name="mrb_turtle_bosss" type="_Z0JLUGQZEeumrdJV2so_bQ" aggregation="shared" association="_tvPn0GQZEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tvPn1WQZEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tvPn1mQZEeumrdJV2so_bQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fQJrkGQaEeumrdJV2so_bQ" name="mrb_moving_sprite" visibility="public">
+    <ownedComment xmi:id="_lp-UYGQaEeumrdJV2so_bQ" annotatedElement="_fQJrkGQaEeumrdJV2so_bQ">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/scripting/objects/sprites/mrb_moving_sprite.hpp</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ifpGYGQaEeumrdJV2so_bQ" name="cMovingSpritesToMrb_moving_sprites" memberEnd="_ifpGYWQaEeumrdJV2so_bQ _ifpGZGQaEeumrdJV2so_bQ" navigableOwnedEnd="_ifpGZGQaEeumrdJV2so_bQ">
+    <ownedEnd xmi:id="_ifpGYWQaEeumrdJV2so_bQ" name="cMovingSprites" type="_JlklkGQGEeumrdJV2so_bQ" association="_ifpGYGQaEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ifpGYmQaEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ifpGY2QaEeumrdJV2so_bQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ifpGZGQaEeumrdJV2so_bQ" name="mrb_moving_sprites" type="_fQJrkGQaEeumrdJV2so_bQ" aggregation="shared" association="_ifpGYGQaEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ifpGZWQaEeumrdJV2so_bQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ifpGZmQaEeumrdJV2so_bQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>
