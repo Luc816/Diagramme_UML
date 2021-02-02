@@ -228,4 +228,71 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ifpGZmQaEeumrdJV2so_bQ" value="*"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_SJ7O8GVIEeuGEohUy71bgA" name="cFlyon" visibility="public">
+    <ownedComment xmi:id="_iC-LQGVIEeuGEohUy71bgA" annotatedElement="_SJ7O8GVIEeuGEohUy71bgA">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/enemies/flyon.hpp</body>
+    </ownedComment>
+    <generalization xmi:id="_U1DYcGVIEeuGEohUy71bgA" general="_K-4NgF-2EeuqNe3Z9h2Wlw"/>
+    <ownedOperation xmi:id="_mqVX8GVIEeuGEohUy71bgA" name="Set_Max_Distance">
+      <ownedParameter xmi:id="_ofCPwGVIEeuGEohUy71bgA" name="nmax_distance" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_sCZo0GVIEeuGEohUy71bgA" name="Set_Speed">
+      <ownedParameter xmi:id="_s_e8IGVIEeuGEohUy71bgA" name="val" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_yUxl0GVIEeuGEohUy71bgA" name="DownGrade" isAbstract="true">
+      <ownedParameter xmi:id="_zuPTIGVIEeuGEohUy71bgA" name="force" type="_2vSJ4F_EEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_2mWvwGVIEeuGEohUy71bgA" name="Update_Normal_Dying" isAbstract="true"/>
+    <ownedOperation xmi:id="_90yFUGVIEeuGEohUy71bgA" name="Set_Moving_State">
+      <ownedParameter xmi:id="__XGMoGVIEeuGEohUy71bgA" name="new_state"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dl8J0GVJEeuGEohUy71bgA" name="cBeetle" visibility="public">
+    <ownedComment xmi:id="_XP90UGVLEeuGEohUy71bgA" annotatedElement="_dl8J0GVJEeuGEohUy71bgA">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/enemies/beetle.hpp</body>
+    </ownedComment>
+    <generalization xmi:id="_gZGN8GVJEeuGEohUy71bgA" general="_K-4NgF-2EeuqNe3Z9h2Wlw"/>
+    <ownedAttribute xmi:id="_8NeT0GVJEeuGEohUy71bgA" name="m_generation_max_y" visibility="private" type="_n9sL0GQMEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8Ne64GVJEeuGEohUy71bgA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8Ne64WVJEeuGEohUy71bgA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_BfTZ0GVKEeuGEohUy71bgA" name="m_generation_in_progress" visibility="private" type="_n9sL0GQMEeumrdJV2so_bQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BfUA4GVKEeuGEohUy71bgA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BfUA4WVKEeuGEohUy71bgA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_v9eh0GVJEeuGEohUy71bgA" name="Is_Doing_Beetle_Barrage_Generation"/>
+    <ownedOperation xmi:id="_1HOC0GVJEeuGEohUy71bgA" name="Do_Beetle_Barrage_Generation">
+      <ownedParameter xmi:id="_3kk2EGVJEeuGEohUy71bgA" name="distance" type="_n9sL0GQMEeumrdJV2so_bQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ORkLYGVKEeuGEohUy71bgA" name="Get_XML_Type_Name" visibility="protected" isAbstract="true"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_K6Vw4GVKEeuGEohUy71bgA" name="string" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_d6BuAGVKEeuGEohUy71bgA" name="cEato" visibility="public">
+    <ownedComment xmi:id="_UaYuUGVLEeuGEohUy71bgA" annotatedElement="_d6BuAGVKEeuGEohUy71bgA">
+      <body>https://github.com/Secretchronicles/TSC/blob/devel/tsc/src/enemies/eato.hpp</body>
+    </ownedComment>
+    <generalization xmi:id="_giBD8GVKEeuGEohUy71bgA" general="_K-4NgF-2EeuqNe3Z9h2Wlw"/>
+    <ownedOperation xmi:id="_xl1xUGVKEeuGEohUy71bgA" name="Editor_Activate" isAbstract="true"/>
+    <ownedOperation xmi:id="_z7YsYGVKEeuGEohUy71bgA" name="Editor_Direction_Select">
+      <ownedParameter xmi:id="_-iq0IGVKEeuGEohUy71bgA" name="event" type="_Wdz7sF_GEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_BQlL4GVLEeuGEohUy71bgA" name="Editor_Image_Dir_Text_Changed">
+      <ownedParameter xmi:id="_DER-IGVLEeuGEohUy71bgA" name="event" type="_Wdz7sF_GEeuqNe3Z9h2Wlw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ISP30GVLEeuGEohUy71bgA" name="Get_XML_Type_Name" visibility="protected" isAbstract="true"/>
+    <ownedOperation xmi:id="_O-j-0GVLEeuGEohUy71bgA" name="Handle_Collision_Massive" isAbstract="true">
+      <ownedParameter xmi:id="_Q93kIGVLEeuGEohUy71bgA" name="collision"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_e5Fh0GVLEeuGEohUy71bgA" name="mrb_eato" visibility="public"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rUt8EGVLEeuGEohUy71bgA" name="cEatosToMrb_eatos" memberEnd="_rUujIGVLEeuGEohUy71bgA _rUvKMmVLEeuGEohUy71bgA" navigableOwnedEnd="_rUvKMmVLEeuGEohUy71bgA">
+    <ownedEnd xmi:id="_rUujIGVLEeuGEohUy71bgA" name="cEatos" type="_d6BuAGVKEeuGEohUy71bgA" association="_rUt8EGVLEeuGEohUy71bgA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rUvKMGVLEeuGEohUy71bgA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rUvKMWVLEeuGEohUy71bgA" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_rUvKMmVLEeuGEohUy71bgA" name="mrb_eatos" type="_e5Fh0GVLEeuGEohUy71bgA" aggregation="shared" association="_rUt8EGVLEeuGEohUy71bgA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rUvxQGVLEeuGEohUy71bgA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rUvxQWVLEeuGEohUy71bgA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>
